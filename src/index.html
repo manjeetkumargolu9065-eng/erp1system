@@ -1,0 +1,625 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyERP - Student Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">E</div>
+            <div>
+                <h2>MyERP</h2>
+                <span>Student Portal</span>
+            </div>
+        </div>
+
+        <div class="profile-mini">
+            <div class="avatar">MG</div>
+            <div>
+                <strong>Manjeet Gupta</strong>
+                <small>CSE • B.Tech</small>
+            </div>
+        </div>
+
+        <nav class="menu">
+
+            <button class="menu-title active" data-page="dashboard">
+                <span>⌂</span> Dashboard
+            </button>
+
+            <!-- ACADEMICS -->
+            <div class="menu-group">
+                <button class="menu-title accordion">
+                    <span>📚</span>
+                    <span class="title-text">Academics</span>
+                    <b>⌄</b>
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#" data-page="Time Table">Time Table</a>
+                    <a href="#" data-page="Course Outline">Course Outline</a>
+                    <a href="#" data-page="Attendance Status">Attendance Status</a>
+                    <a href="#" data-page="Attendance Subject">Attendance Subject</a>
+                    <a href="#" data-page="Assessment Subject">Assessment Subject</a>
+                    <a href="#" data-page="Assessment Marks">Assessment Marks</a>
+                    <a href="#" data-page="Assignment">Assignment</a>
+                    <a href="#" data-page="Assignments">Assignments</a>
+                    <a href="#" data-page="Current Backlog">Current Backlog</a>
+                    <a href="#" data-page="Exam Result">Exam Result</a>
+                    <a href="#" data-page="Leave Application">Leave Application</a>
+                    <a href="#" data-page="Mentoring Questions">Mentoring Questions</a>
+                    <a href="#" data-page="My Grades">My Grades</a>
+                    <a href="#" data-page="Online Class Record">Online Class Record</a>
+                    <a href="#" data-page="Online Test">Online Test</a>
+                    <a href="#" data-page="Online Test Portal">Online Test Portal</a>
+                    <a href="#" data-page="Plagiarism Check">Plagiarism Check</a>
+                    <a href="#" data-page="Print Exam Form">Print Exam Form</a>
+                    <a href="#" data-page="Registration Form">Registration Form</a>
+                    <a href="#" data-page="Special Leave">Special Leave</a>
+                    <a href="#" data-page="Student Progress">Student Progress</a>
+                    <a href="#" data-page="Subject Choice">Subject Choice</a>
+                    <a href="#" data-page="Zoom Online Class">Zoom Online Class</a>
+                    <a href="#" data-page="Exam Schedule">Exam Schedule</a>
+
+                </div>
+            </div>
+
+            <!-- FEES -->
+            <div class="menu-group">
+                <button class="menu-title accordion">
+                    <span>💰</span>
+                    <span class="title-text">Fees</span>
+                    <b>⌄</b>
+                </button>
+
+                <div class="submenu">
+                    <a href="#" data-page="Apply Bus Facility">Apply Bus Facility</a>
+                    <a href="#" data-page="Fees Installment">Fees Installment</a>
+                    <a href="#" data-page="Fees Receipts">Fees Receipts</a>
+                    <a href="#" data-page="Online Fee Transaction">Online Fee Transaction</a>
+                    <a href="#" data-page="Other Fee Print">Other Fee Print</a>
+                    <a href="#" data-page="Other Ledger">Other Ledger</a>
+                    <a href="#" data-page="Pay Fee Bus/Mess">Pay Fee Bus/Mess</a>
+                    <a href="#" data-page="Pay Fee Online">Pay Fee Online</a>
+                    <a href="#" data-page="Pay Other Fee">Pay Other Fee</a>
+                    <a href="#" data-page="Student Ledger">Student Ledger</a>
+                    <a href="#" data-page="Verify Transaction">Verify Transaction</a>
+                </div>
+            </div>
+
+            <!-- GENERAL INFO -->
+            <div class="menu-group">
+                <button class="menu-title accordion">
+                    <span>ℹ️</span>
+                    <span class="title-text">General Info</span>
+                    <b>⌄</b>
+                </button>
+
+                <div class="submenu">
+                    <a href="#" data-page="ABCID Verification">ABCID Verification</a>
+                    <a href="#" data-page="Academic Calendar">Academic Calendar</a>
+                    <a href="#" data-page="Contact Details">Contact Details</a>
+                    <a href="#" data-page="Examination Pattern">Examination Pattern</a>
+                    <a href="#" data-page="Grievance">Grievance</a>
+                    <a href="#" data-page="News/Notices">News / Notices</a>
+                    <a href="#" data-page="Online Form Application">Online Form Application</a>
+                    <a href="#" data-page="Other Service Request">Other Service Request</a>
+                    <a href="#" data-page="Progression Diary">Progression Diary</a>
+                    <a href="#" data-page="Progression Index">Progression Index</a>
+                    <a href="#" data-page="Question Bank">Question Bank</a>
+                    <a href="#" data-page="Question Paper">Question Paper</a>
+                    <a href="#" data-page="Submit Documents">Submit Documents</a>
+                    <a href="#" data-page="Syllabus">Syllabus</a>
+                    <a href="#" data-page="Today's Dispatch">Today's Dispatch</a>
+                    <a href="#" data-page="Your Profile">Your Profile</a>
+                </div>
+            </div>
+
+            <!-- PLACEMENTS -->
+            <div class="menu-group">
+                <button class="menu-title accordion">
+                    <span>💼</span>
+                    <span class="title-text">Placements</span>
+                    <b>⌄</b>
+                </button>
+
+                <div class="submenu">
+                    <a href="#" data-page="Career Plan">Career Plan</a>
+                    <a href="#" data-page="Internship Permission">Internship Permission</a>
+                    <a href="#" data-page="Placement News">News / Notices</a>
+                    <a href="#" data-page="Placements">Placements</a>
+                    <a href="#" data-page="Placement Drive">Placement Drive</a>
+                    <a href="#" data-page="Update Profile 1">Update Profile 1</a>
+                    <a href="#" data-page="Update Profile 2">Update Profile 2</a>
+                    <a href="#" data-page="Update Resume">Update Resume</a>
+                    <a href="#" data-page="Upload SIP">Upload SIP Related Documents</a>
+                </div>
+            </div>
+
+            <!-- HOSTEL -->
+            <div class="menu-group">
+                <button class="menu-title accordion">
+                    <span>🏠</span>
+                    <span class="title-text">Hostel</span>
+                    <b>⌄</b>
+                </button>
+
+                <div class="submenu">
+                    <a href="#" data-page="Hostel Notification">Hostel Notification</a>
+                    <a href="#" data-page="Hostel/Bus Service">Hostel / Bus Service</a>
+                    <a href="#" data-page="Hostel Complaint">Hostel Complaint</a>
+                    <a href="#" data-page="Hostel Registration">Hostel Registration</a>
+                </div>
+            </div>
+
+            <!-- TRANSPORTATION -->
+            <div class="menu-group">
+                <button class="menu-title accordion">
+                    <span>🚍</span>
+                    <span class="title-text">Transportation</span>
+                    <b>⌄</b>
+                </button>
+
+                <div class="submenu">
+                    <a href="#" data-page="Apply Bus Stops">Apply Bus Stops</a>
+                    <a href="#" data-page="Bus Routes">Bus Routes</a>
+                    <a href="#" data-page="Bus Stops">Bus Stops</a>
+                </div>
+            </div>
+
+            <!-- LIBRARY -->
+            <div class="menu-group">
+                <button class="menu-title accordion">
+                    <span>📖</span>
+                    <span class="title-text">Library</span>
+                    <b>⌄</b>
+                </button>
+
+                <div class="submenu">
+                    <a href="#" data-page="Circulation Ledger">Circulation Ledger</a>
+                    <a href="#" data-page="Ebook Center">Ebook Center</a>
+                    <a href="#" data-page="Fine Records">Fine Records</a>
+                    <a href="#" data-page="Library Rules">Library Rules & Conditions</a>
+                    <a href="#" data-page="OPAC">OPAC</a>
+                </div>
+            </div>
+
+            <button class="menu-title" data-page="Non Academic">
+                <span>🌐</span> Non Academic
+            </button>
+
+            <button class="menu-title" data-page="Enrichment">
+                <span>📄</span> Enrichment
+            </button>
+
+            <button class="menu-title" data-page="Communication">
+                <span>💬</span> Communication
+            </button>
+
+            <button class="menu-title" data-page="Faculty Details">
+                <span>👨‍🏫</span> Faculty Details
+            </button>
+
+            <button class="menu-title" data-page="Your Mentor">
+                <span>🧑‍🏫</span> Your Mentor
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button id="logoutBtn">⇥ <span>Logout</span></button>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+
+            <div class="page-heading">
+                <span class="small-heading">Student Portal</span>
+                <h1 id="pageTitle">Dashboard</h1>
+            </div>
+
+            <div class="top-actions">
+
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="text" id="searchInput" placeholder="Search menu...">
+                </div>
+
+                <button class="icon-btn" id="themeBtn" title="Change theme">
+                    ☾
+                </button>
+
+                <button class="icon-btn notification" title="Notifications">
+                    🔔
+                    <i>3</i>
+                </button>
+
+                <div class="top-profile">
+                    <div class="avatar small">MG</div>
+                    <div>
+                        <strong>Manjeet Gupta</strong>
+                        <small>Student</small>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+
+        <!-- CONTENT -->
+        <section class="content" id="content">
+
+            <!-- DASHBOARD -->
+            <div id="dashboardPage">
+
+                <div class="welcome-card">
+
+                    <div>
+                        <span class="welcome-label">WELCOME BACK 👋</span>
+                        <h2>Hello, Manjeet!</h2>
+                        <p>Here's what's happening with your academic journey today.</p>
+
+                        <button class="primary-btn" onclick="openPage('Your Profile')">
+                            View Profile →
+                        </button>
+                    </div>
+
+                    <div class="welcome-art">
+                        <div class="orbit orbit1"></div>
+                        <div class="orbit orbit2"></div>
+                        <div class="cube">E</div>
+                    </div>
+
+                </div>
+
+
+                <!-- STATS -->
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue">📊</div>
+                        <div>
+                            <span>Attendance</span>
+                            <strong>82.5%</strong>
+                            <small>↑ 4.2% this month</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">🎓</div>
+                        <div>
+                            <span>Current SGPA</span>
+                            <strong>5.79</strong>
+                            <small>Semester 2</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">💳</div>
+                        <div>
+                            <span>Fee Status</span>
+                            <strong>Paid</strong>
+                            <small>All dues cleared</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">📝</div>
+                        <div>
+                            <span>Assignments</span>
+                            <strong>08</strong>
+                            <small>2 pending</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD GRID -->
+                <div class="dashboard-grid">
+
+                    <div class="panel attendance-panel">
+
+                        <div class="panel-header">
+                            <div>
+                                <span>ACADEMIC</span>
+                                <h3>Attendance Overview</h3>
+                            </div>
+
+                            <button onclick="openPage('Attendance Status')">
+                                View Details →
+                            </button>
+                        </div>
+
+                        <div class="attendance-content">
+
+                            <div class="progress-circle">
+                                <div>
+                                    <strong>82%</strong>
+                                    <span>Overall</span>
+                                </div>
+                            </div>
+
+                            <div class="subject-bars">
+
+                                <div class="bar-item">
+                                    <div>
+                                        <span>Java Programming</span>
+                                        <b>91%</b>
+                                    </div>
+                                    <div class="bar">
+                                        <i style="width:91%"></i>
+                                    </div>
+                                </div>
+
+                                <div class="bar-item">
+                                    <div>
+                                        <span>Operating System</span>
+                                        <b>84%</b>
+                                    </div>
+                                    <div class="bar">
+                                        <i style="width:84%"></i>
+                                    </div>
+                                </div>
+
+                                <div class="bar-item">
+                                    <div>
+                                        <span>DBMS</span>
+                                        <b>79%</b>
+                                    </div>
+                                    <div class="bar">
+                                        <i style="width:79%"></i>
+                                    </div>
+                                </div>
+
+                                <div class="bar-item">
+                                    <div>
+                                        <span>Computer Networks</span>
+                                        <b>76%</b>
+                                    </div>
+                                    <div class="bar">
+                                        <i style="width:76%"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- UPCOMING -->
+                    <div class="panel">
+
+                        <div class="panel-header">
+                            <div>
+                                <span>UPCOMING</span>
+                                <h3>Next Events</h3>
+                            </div>
+
+                            <button onclick="openPage('Exam Schedule')">
+                                View All →
+                            </button>
+                        </div>
+
+                        <div class="events">
+
+                            <div class="event">
+                                <div class="date">
+                                    <b>04</b>
+                                    <small>OCT</small>
+                                </div>
+
+                                <div>
+                                    <strong>Java Assignment</strong>
+                                    <span>📚 Academic • 11:59 PM</span>
+                                </div>
+
+                                <em class="badge warning">Due</em>
+                            </div>
+
+                            <div class="event">
+                                <div class="date">
+                                    <b>08</b>
+                                    <small>OCT</small>
+                                </div>
+
+                                <div>
+                                    <strong>DBMS Online Test</strong>
+                                    <span>💻 Online Test • 10:00 AM</span>
+                                </div>
+
+                                <em class="badge blue-badge">Test</em>
+                            </div>
+
+                            <div class="event">
+                                <div class="date">
+                                    <b>15</b>
+                                    <small>OCT</small>
+                                </div>
+
+                                <div>
+                                    <strong>Mid Semester Exam</strong>
+                                    <span>📝 Examination • 9:00 AM</span>
+                                </div>
+
+                                <em class="badge danger">Exam</em>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+                    <div class="panel quick-panel">
+
+                        <div class="panel-header">
+                            <div>
+                                <span>QUICK ACCESS</span>
+                                <h3>Frequently Used</h3>
+                            </div>
+                        </div>
+
+                        <div class="quick-grid">
+
+                            <button onclick="openPage('Time Table')">
+                                <span>📅</span>
+                                <b>Time Table</b>
+                            </button>
+
+                            <button onclick="openPage('Attendance Status')">
+                                <span>📊</span>
+                                <b>Attendance</b>
+                            </button>
+
+                            <button onclick="openPage('Exam Result')">
+                                <span>🏆</span>
+                                <b>Results</b>
+                            </button>
+
+                            <button onclick="openPage('Pay Fee Online')">
+                                <span>💳</span>
+                                <b>Pay Fees</b>
+                            </button>
+
+                            <button onclick="openPage('Update Resume')">
+                                <span>📄</span>
+                                <b>Resume</b>
+                            </button>
+
+                            <button onclick="openPage('OPAC')">
+                                <span>📖</span>
+                                <b>Library</b>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOTICE -->
+                    <div class="panel notice-panel">
+
+                        <div class="panel-header">
+                            <div>
+                                <span>NOTICE BOARD</span>
+                                <h3>Latest Updates</h3>
+                            </div>
+
+                            <button onclick="openPage('News/Notices')">
+                                All Notices →
+                            </button>
+                        </div>
+
+                        <div class="notice">
+                            <span class="notice-dot"></span>
+                            <div>
+                                <strong>Mid Semester Examination Schedule Released</strong>
+                                <p>Check the examination schedule under Academics.</p>
+                            </div>
+                            <small>Today</small>
+                        </div>
+
+                        <div class="notice">
+                            <span class="notice-dot"></span>
+                            <div>
+                                <strong>Placement Drive Registration Open</strong>
+                                <p>New company drive registration is now available.</p>
+                            </div>
+                            <small>Yesterday</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DYNAMIC PAGE -->
+            <div id="dynamicPage" class="dynamic-page hidden">
+
+                <button class="back-btn" onclick="showDashboard()">
+                    ← Back to Dashboard
+                </button>
+
+                <div class="page-card">
+
+                    <div class="page-icon" id="dynamicIcon">📚</div>
+
+                    <div>
+                        <span class="small-heading">ERP MODULE</span>
+                        <h2 id="dynamicTitle">Academic Module</h2>
+                        <p id="dynamicDescription">
+                            Module information will appear here.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="module-grid">
+
+                    <div class="module-card">
+                        <span>📋</span>
+                        <h3>Module Information</h3>
+                        <p>Details and information related to this ERP section.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <span>📊</span>
+                        <h3>Records</h3>
+                        <p>View your records, status and available information.</p>
+                    </div>
+
+                    <div class="module-card">
+                        <span>⚡</span>
+                        <h3>Quick Action</h3>
+                        <button class="primary-btn" onclick="showMessage()">
+                            Open Module
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <span>© 2026 MyERP Student Portal</span>
+            <span>Designed with Ice Blue UI</span>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
